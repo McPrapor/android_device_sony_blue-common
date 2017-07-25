@@ -20,6 +20,9 @@ COMMON_PATH := device/sony/blue-common
 # Board common headers
 TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
+# Fix for old blobs
+NEEDS_VECTORIMPL_SYMBOLS := true
+
 # Board common elements
 include $(COMMON_PATH)/PlatformConfig.mk
 include $(COMMON_PATH)/board/*.mk
